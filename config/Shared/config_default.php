@@ -48,6 +48,8 @@ use Spryker\Zed\Log\Communication\Plugin\ZedLoggerConfigPlugin;
 use Spryker\Zed\Oms\OmsConfig;
 use Spryker\Zed\Propel\PropelConfig;
 use SprykerEco\Shared\Loggly\LogglyConstants;
+use SprykerEco\Shared\AkeneoPim\AkeneoPimConstants;
+use SprykerEco\Shared\AkeneoPimMiddlewareConnector\AkeneoPimMiddlewareConnectorConstants;
 
 $CURRENT_STORE = Store::getInstance()->getStoreName();
 
@@ -67,6 +69,7 @@ $config[KernelConstants::PROJECT_NAMESPACES] = [
 ];
 $config[KernelConstants::CORE_NAMESPACES] = [
     'SprykerShop',
+    'SprykerMiddleware',
     'SprykerEco',
     'Spryker',
 ];
@@ -463,3 +466,34 @@ $config[MonitoringConstants::IGNORABLE_TRANSACTIONS] = [
 
 // ---------- Guest cart
 $config[QuoteConstants::GUEST_QUOTE_LIFETIME] = 'P01M';
+
+$config[AkeneoPimConstants::HOST] = 'http://spryker.mkp.akeneo.com/';
+$config[AkeneoPimConstants::USERNAME] = 'admin';
+$config[AkeneoPimConstants::PASSWORD] = 'admin';
+$config[AkeneoPimConstants::CLIENT_ID] = '1_51pgmx1tafk8wgc0400k0s8s8gcg8ccsswokcwos0g0owcc8sc';
+$config[AkeneoPimConstants::CLIENT_SECRET] = '1hpzjh4l1zwg088oks0koocoos8g4kogs8wsssk0048ooogggw';
+$config[AkeneoPimMiddlewareConnectorConstants::LOCALE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/locale_map.json';
+$config[AkeneoPimMiddlewareConnectorConstants::ATTRIBUTE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/attribute_map.json';
+$config[AkeneoPimMiddlewareConnectorConstants::SUPER_ATTRIBUTE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/super_attribute_map.json';
+$config[AkeneoPimMiddlewareConnectorConstants::FK_CATEGORY_TEMPLATE] = 1;
+$config[AkeneoPimMiddlewareConnectorConstants::TAX_SET] = 'Tax Exempt';
+$config[AkeneoPimMiddlewareConnectorConstants::LOCALES_FOR_IMPORT] = [
+    'de_DE',
+    'en_US',
+];
+$config[AkeneoPimMiddlewareConnectorConstants::ACTIVE_STORES_FOR_PRODUCTS] = [
+    'DE',
+    'US'
+];
+$config[AkeneoPimMiddlewareConnectorConstants::LOCALES_TO_PRICE_MAP] = [
+    'de_DE' => [
+        'currency' => 'EUR',
+        'type' => 'DEFAULT',
+        'store' => 'DE',
+    ],
+    'en_US' => [
+        'currency' => 'USD',
+        'type' => 'DEFAULT',
+        'store' => 'US',
+    ],
+];

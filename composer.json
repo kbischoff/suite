@@ -14,6 +14,7 @@
     "ext-pgsql": "*",
     "ext-readline": "*",
     "ext-redis": "*",
+    "spryker-eco/akeneo-pim-middleware-connector": "^1.0",
     "spryker-eco/loggly": "dev-master as 1.0.0",
     "spryker-shop/agent-page": "^1.0.0",
     "spryker-shop/agent-widget": "^1.0.0",

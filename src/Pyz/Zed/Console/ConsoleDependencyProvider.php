@@ -123,6 +123,7 @@ use Spryker\Zed\Twig\Communication\Console\CacheWarmerConsole;
 use Spryker\Zed\Twig\Communication\Plugin\ServiceProvider\TwigServiceProvider as SprykerTwigServiceProvider;
 use Spryker\Zed\WishlistsRestApi\Communication\Console\WishlistsUuidWriterConsole;
 use Spryker\Zed\ZedNavigation\Communication\Console\BuildNavigationConsole;
+use SprykerMiddleware\Zed\Process\Communication\Console\ProcessConsole;
 use Stecman\Component\Symfony\Console\BashCompletion\CompletionCommand;
 
 /**
@@ -278,6 +279,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new ProductTaxSetsRestApiConsole(),
             new CustomerAddressesUuidWriterConsole(),
             new DeleteExpiredGuestQuoteConsole(),
+            new ProcessConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
