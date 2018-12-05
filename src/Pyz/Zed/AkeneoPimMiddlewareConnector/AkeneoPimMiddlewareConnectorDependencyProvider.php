@@ -330,7 +330,7 @@ class AkeneoPimMiddlewareConnectorDependencyProvider extends SprykerEcoAkeneoPim
     protected function addProductModelImportProcessPlugins(Container $container): Container
     {
         $container[static::PRODUCT_MODEL_IMPORT_INPUT_STREAM_PLUGIN] = function () {
-            return new JsonInputStreamPlugin();
+            return new JsonRowInputStreamPlugin();
         };
         $container[static::PRODUCT_MODEL_IMPORT_OUTPUT_STREAM_PLUGIN] = function () {
             return new ProductAbstractWriteStreamPlugin();
@@ -399,7 +399,7 @@ class AkeneoPimMiddlewareConnectorDependencyProvider extends SprykerEcoAkeneoPim
             return new ProductModelAkeneoApiStreamPlugin();
         };
         $container[static::PRODUCT_MODEL_PREPARATION_OUTPUT_STREAM_PLUGIN] = function () {
-            return new JsonOutputStreamPlugin();
+            return new JsonRowOutputStreamPlugin();
         };
         $container[static::PRODUCT_MODEL_PREPARATION_ITERATOR_PLUGIN] = function () {
             return new NullIteratorPlugin();

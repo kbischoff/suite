@@ -166,6 +166,10 @@ class ProductAbstractHydratorStep implements DataImportStepInterface
         $urlsTransfer = [];
 
         foreach ($dataSet[ProductLocalizedAttributesExtractorStep::KEY_LOCALIZED_ATTRIBUTES] as $idLocale => $localizedAttributes) {
+            if ($idLocale == 66) {
+                continue;
+            }
+
             $abstractProductUrl = $localizedAttributes[static::KEY_URL];
 
             $urlEntityTransfer = new SpyUrlEntityTransfer();

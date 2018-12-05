@@ -467,16 +467,17 @@ $config[MonitoringConstants::IGNORABLE_TRANSACTIONS] = [
 // ---------- Guest cart
 $config[QuoteConstants::GUEST_QUOTE_LIFETIME] = 'P01M';
 
-$config[AkeneoPimConstants::HOST] = 'http://spryker.mkp.akeneo.com/';
-$config[AkeneoPimConstants::USERNAME] = 'admin';
-$config[AkeneoPimConstants::PASSWORD] = 'admin';
-$config[AkeneoPimConstants::CLIENT_ID] = '1_51pgmx1tafk8wgc0400k0s8s8gcg8ccsswokcwos0g0owcc8sc';
-$config[AkeneoPimConstants::CLIENT_SECRET] = '1hpzjh4l1zwg088oks0koocoos8g4kogs8wsssk0048ooogggw';
 $config[AkeneoPimMiddlewareConnectorConstants::LOCALE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/locale_map.json';
 $config[AkeneoPimMiddlewareConnectorConstants::ATTRIBUTE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/attribute_map.json';
 $config[AkeneoPimMiddlewareConnectorConstants::SUPER_ATTRIBUTE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/super_attribute_map.json';
 $config[AkeneoPimMiddlewareConnectorConstants::FK_CATEGORY_TEMPLATE] = 1;
 $config[AkeneoPimMiddlewareConnectorConstants::TAX_SET] = 'Tax Exempt';
+$config[AkeneoPimConstants::HOST] = 'https://test.akeneo2.melvin-hamilton.com';
+$config[AkeneoPimConstants::USERNAME] = 'volodymyr.hrychenko@spryker.com';
+$config[AkeneoPimConstants::PASSWORD] = 'KD8p4eZnF9c8v';
+$config[AkeneoPimConstants::CLIENT_ID] = '4_3n0c22qrigqowo0ck8g4kgo8gks40owgk0kc4g4kgkgws4wsok';
+$config[AkeneoPimConstants::CLIENT_SECRET] = '3aaqok3i15gk4kwkgw0okww8k40osowgo04c0w0kcccgs8os4o';
+
 $config[AkeneoPimMiddlewareConnectorConstants::LOCALES_FOR_IMPORT] = [
     'de_DE',
     'en_US',
