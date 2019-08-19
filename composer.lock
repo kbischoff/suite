@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "32f3902a178aa8fcc9c88331c225ebe4",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.109.5",
+            "version": "3.109.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "62c85d4675a10bb2d046ed65f3da8471277b78eb"
+                "reference": "c129c2120943340cb102ab1a1c7c76d03c00bcc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/62c85d4675a10bb2d046ed65f3da8471277b78eb",
-                "reference": "62c85d4675a10bb2d046ed65f3da8471277b78eb",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c129c2120943340cb102ab1a1c7c76d03c00bcc4",
+                "reference": "c129c2120943340cb102ab1a1c7c76d03c00bcc4",
                 "shasum": ""
             },
             "require": {
@@ -87,7 +87,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2019-08-15T18:21:32+00:00"
+            "time": "2019-08-16T18:13:56+00:00"
         },
         {
             "name": "codeitnowin/barcode",
@@ -3943,16 +3943,16 @@
         },
         {
             "name": "spryker-shop/customer-page",
-            "version": "1.24.0",
+            "version": "1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-page.git",
-                "reference": "8fcfb01af628c854ce465c8b03dda239a0afaf6b"
+                "reference": "e71a612e930251309790a64b8862184b0b4de1dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/8fcfb01af628c854ce465c8b03dda239a0afaf6b",
-                "reference": "8fcfb01af628c854ce465c8b03dda239a0afaf6b",
+                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/e71a612e930251309790a64b8862184b0b4de1dc",
+                "reference": "e71a612e930251309790a64b8862184b0b4de1dc",
                 "shasum": ""
             },
             "require": {
@@ -4014,7 +4014,7 @@
                 "proprietary"
             ],
             "description": "CustomerPage module",
-            "time": "2019-08-14T11:31:41+00:00"
+            "time": "2019-08-16T14:10:56+00:00"
         },
         {
             "name": "spryker-shop/customer-page-extension",
@@ -6647,16 +6647,16 @@
         },
         {
             "name": "spryker-shop/shop-ui",
-            "version": "1.29.0",
+            "version": "1.29.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/shop-ui.git",
-                "reference": "afe773b5d494c8a6d5743f1fd55df428563d3212"
+                "reference": "5f27a833b517ed0f999cad30a6e247bc38e31841"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/shop-ui/zipball/afe773b5d494c8a6d5743f1fd55df428563d3212",
-                "reference": "afe773b5d494c8a6d5743f1fd55df428563d3212",
+                "url": "https://api.github.com/repos/spryker-shop/shop-ui/zipball/5f27a833b517ed0f999cad30a6e247bc38e31841",
+                "reference": "5f27a833b517ed0f999cad30a6e247bc38e31841",
                 "shasum": ""
             },
             "require": {
@@ -6691,7 +6691,7 @@
                 "proprietary"
             ],
             "description": "ShopUi module",
-            "time": "2019-08-14T08:12:53+00:00"
+            "time": "2019-08-16T16:02:45+00:00"
         },
         {
             "name": "spryker-shop/shopping-list-note-widget",
@@ -11615,24 +11615,24 @@
         },
         {
             "name": "spryker/companies-rest-api",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/companies-rest-api.git",
-                "reference": "69b4a404ee9af43a4df418fac8581cc65713abbe"
+                "reference": "ab0f048560edc5f72802d7bb39bd88f80e5576d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/companies-rest-api/zipball/69b4a404ee9af43a4df418fac8581cc65713abbe",
-                "reference": "69b4a404ee9af43a4df418fac8581cc65713abbe",
+                "url": "https://api.github.com/repos/spryker/companies-rest-api/zipball/ab0f048560edc5f72802d7bb39bd88f80e5576d8",
+                "reference": "ab0f048560edc5f72802d7bb39bd88f80e5576d8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
                 "spryker/company": "^1.4.0",
-                "spryker/glue-application": "^1.14.0",
+                "spryker/glue-application": "^1.15.0",
                 "spryker/glue-application-extension": "^1.0.0",
-                "spryker/kernel": "^3.29.0",
+                "spryker/kernel": "^3.30.0",
                 "spryker/symfony": "^3.0.0",
                 "spryker/uuid-behavior": "^1.0.0"
             },
@@ -11659,7 +11659,7 @@
                 "proprietary"
             ],
             "description": "CompaniesRestApi module",
-            "time": "2019-05-07T11:20:24+00:00"
+            "time": "2019-08-12T06:09:58+00:00"
         },
         {
             "name": "spryker/company",
@@ -23059,21 +23059,21 @@
         },
         {
             "name": "spryker/product-image",
-            "version": "3.7.0",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-image.git",
-                "reference": "61fb64fc59a440deb62e48072fd309661d9fcdc2"
+                "reference": "d3719898926d72d0fa3d39041ca34401066ec9d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-image/zipball/61fb64fc59a440deb62e48072fd309661d9fcdc2",
-                "reference": "61fb64fc59a440deb62e48072fd309661d9fcdc2",
+                "url": "https://api.github.com/repos/spryker/product-image/zipball/d3719898926d72d0fa3d39041ca34401066ec9d1",
+                "reference": "d3719898926d72d0fa3d39041ca34401066ec9d1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
-                "spryker/kernel": "^3.0.0",
+                "spryker/kernel": "^3.30.0",
                 "spryker/locale": "^3.0.0",
                 "spryker/product": "^5.0.0 || ^6.0.0",
                 "spryker/propel-orm": "^1.0.0"
@@ -23100,7 +23100,7 @@
                 "proprietary"
             ],
             "description": "ProductImage module",
-            "time": "2019-06-27T13:53:05+00:00"
+            "time": "2019-08-15T12:49:52+00:00"
         },
         {
             "name": "spryker/product-image-cart-connector",
@@ -34004,16 +34004,16 @@
         },
         {
             "name": "zendframework/zend-filter",
-            "version": "2.9.1",
+            "version": "2.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-filter.git",
-                "reference": "1c3e6d02f9cd5f6c929c9859498f5efbe216e86f"
+                "reference": "d78f2cdde1c31975e18b2a0753381ed7b61118ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-filter/zipball/1c3e6d02f9cd5f6c929c9859498f5efbe216e86f",
-                "reference": "1c3e6d02f9cd5f6c929c9859498f5efbe216e86f",
+                "url": "https://api.github.com/repos/zendframework/zend-filter/zipball/d78f2cdde1c31975e18b2a0753381ed7b61118ef",
+                "reference": "d78f2cdde1c31975e18b2a0753381ed7b61118ef",
                 "shasum": ""
             },
             "require": {
@@ -34059,13 +34059,13 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "provides a set of commonly needed data filters",
+            "description": "Programmatically filter and normalize data and files",
             "keywords": [
                 "ZendFramework",
                 "filter",
                 "zf"
             ],
-            "time": "2018-12-17T16:00:04+00:00"
+            "time": "2019-08-19T07:08:04+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -35956,16 +35956,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.11.13",
+            "version": "0.11.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "493d12d4a98ba0d2a0b8e576d80e65c8e8068d08"
+                "reference": "1be5b3a706db16ac472a4c40ec03cf4c810b118d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/493d12d4a98ba0d2a0b8e576d80e65c8e8068d08",
-                "reference": "493d12d4a98ba0d2a0b8e576d80e65c8e8068d08",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1be5b3a706db16ac472a4c40ec03cf4c810b118d",
+                "reference": "1be5b3a706db16ac472a4c40ec03cf4c810b118d",
                 "shasum": ""
             },
             "require": {
@@ -36027,7 +36027,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2019-08-13T13:05:56+00:00"
+            "time": "2019-08-18T20:51:53+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -37625,16 +37625,16 @@
         },
         {
             "name": "spryker/development",
-            "version": "3.21.5",
+            "version": "3.21.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/development.git",
-                "reference": "a2cf8fe8f7962b93bb324666ff32ccf25a07ef07"
+                "reference": "3c72ba4d2d251ac4a08f6ab45b0f4f62d5a07679"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/development/zipball/a2cf8fe8f7962b93bb324666ff32ccf25a07ef07",
-                "reference": "a2cf8fe8f7962b93bb324666ff32ccf25a07ef07",
+                "url": "https://api.github.com/repos/spryker/development/zipball/3c72ba4d2d251ac4a08f6ab45b0f4f62d5a07679",
+                "reference": "3c72ba4d2d251ac4a08f6ab45b0f4f62d5a07679",
                 "shasum": ""
             },
             "require": {
@@ -37673,7 +37673,7 @@
                 "proprietary"
             ],
             "description": "Development module",
-            "time": "2019-08-09T11:38:01+00:00"
+            "time": "2019-08-16T10:16:31+00:00"
         },
         {
             "name": "spryker/module-finder",
