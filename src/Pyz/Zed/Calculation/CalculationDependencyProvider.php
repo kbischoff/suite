@@ -277,8 +277,6 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
      */
     protected function getQuotePostRecalculatePlugins(): array
     {
-        return [
-            new QuoteSaveQuotePostRecalculateStrategyPlugin(),
-        ];
+        return [];
     }
 }

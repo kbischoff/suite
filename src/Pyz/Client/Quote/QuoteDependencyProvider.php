@@ -35,8 +35,6 @@ class QuoteDependencyProvider extends BaseQuoteDependencyProvider
      */
     protected function getDatabaseStrategyPreCheckPlugins(): array
     {
-        return [
-            new QuoteRequestDatabaseStrategyPreCheckPlugin(),
-        ];
+        return [];
     }
 }

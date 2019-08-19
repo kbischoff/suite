@@ -290,7 +290,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
             new CleanTranslationCacheConsole(),
             new GenerateTranslationCacheConsole(),
-            new CloseOutdatedQuoteRequestConsole(),
 
             new PriceProductScheduleApplyConsole(),
             new PriceProductScheduleCleanupConsole(),

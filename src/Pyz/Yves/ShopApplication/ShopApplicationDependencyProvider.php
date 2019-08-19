@@ -140,7 +140,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             MiniCartWidget::class,
             MultiCartListWidget::class,
             MultiCartMenuItemWidget::class,
-            QuoteRequestMenuItemWidget::class,
             NavigationWidget::class,
             NewsletterSubscriptionWidget::class,
             NewsletterSubscriptionSummaryWidget::class,
@@ -194,11 +193,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             CategoryImageStorageWidget::class,
             AvailabilityNotificationSubscriptionWidget::class,
             ProductConcreteAddWidget::class,
-            QuoteRequestCreateWidget::class,
-            QuoteRequestCartWidget::class,
-            QuoteRequestCancelWidget::class,
-            QuoteRequestAgentOverviewWidget::class,
-            QuoteRequestAgentCancelWidget::class,
         ];
     }
 
