@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c0a649e5f32284a140501e0976d1926",
+    "content-hash": "1880e4e2431d96dad4aedaa72cda81a8",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2802,6 +2802,9 @@
                 "psr",
                 "psr-18"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-client/tree/master"
+            },
             "time": "2020-06-29T06:28:15+00:00"
         },
         {
@@ -23602,6 +23605,9 @@
                 "proprietary"
             ],
             "description": "Guzzle module",
+            "support": {
+                "source": "https://github.com/spryker/guzzle/tree/2.3.0"
+            },
             "time": "2020-07-23T14:18:52+00:00"
         },
         {
@@ -24683,6 +24689,9 @@
                 "MIT"
             ],
             "description": "MerchantDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-data-import/tree/master"
+            },
             "time": "2020-05-15T13:58:38+00:00"
         },
         {
@@ -24911,6 +24920,9 @@
                 "MIT"
             ],
             "description": "MerchantOmsDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-oms-data-import/tree/0.2.2"
+            },
             "time": "2020-05-29T08:34:44+00:00"
         },
         {
@@ -25039,6 +25051,9 @@
                 "MIT"
             ],
             "description": "MerchantOpeningHoursDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-opening-hours-data-import/tree/0.2.1"
+            },
             "time": "2020-05-12T15:08:12+00:00"
         },
         {
@@ -25829,6 +25844,9 @@
                 "MIT"
             ],
             "description": "MerchantProfileDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-profile-data-import/tree/master"
+            },
             "time": "2020-05-20T07:54:04+00:00"
         },
         {
@@ -26016,6 +26034,9 @@
                 "MIT"
             ],
             "description": "MerchantRelationshipDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-relationship-data-import/tree/0.1.8"
+            },
             "time": "2020-05-12T15:08:12+00:00"
         },
         {
@@ -26798,6 +26819,9 @@
                 "MIT"
             ],
             "description": "MerchantStockDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-stock-data-import/tree/master"
+            },
             "time": "2020-05-18T11:59:13+00:00"
         },
         {
@@ -39170,6 +39194,9 @@
                 "proprietary"
             ],
             "description": "SalesOms module",
+            "support": {
+                "source": "https://github.com/spryker/sales-oms/tree/0.1.0"
+            },
             "time": "2020-05-29T12:33:32+00:00"
         },
         {
@@ -42373,6 +42400,9 @@
                 "MIT"
             ],
             "description": "StockDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/stock-data-import/tree/1.1.2"
+            },
             "time": "2020-05-05T00:59:59+00:00"
         },
         {
@@ -43066,16 +43096,16 @@
         },
         {
             "name": "spryker/tax",
-            "version": "5.9.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/tax.git",
-                "reference": "124accfef2eee3f71d9a6fec48fe29293545383e"
+                "reference": "d3f216d06d350b1ed3673c19c586041316159152"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/tax/zipball/124accfef2eee3f71d9a6fec48fe29293545383e",
-                "reference": "124accfef2eee3f71d9a6fec48fe29293545383e",
+                "url": "https://api.github.com/repos/spryker/tax/zipball/d3f216d06d350b1ed3673c19c586041316159152",
+                "reference": "d3f216d06d350b1ed3673c19c586041316159152",
                 "shasum": ""
             },
             "require": {
@@ -43092,8 +43122,14 @@
             "require-dev": {
                 "spryker/application": "*",
                 "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/event-dispatcher": "*",
+                "spryker/form": "*",
                 "spryker/propel": "*",
+                "spryker/router": "*",
                 "spryker/testify": "*",
+                "spryker/twig": "*",
+                "spryker/validator": "*",
                 "spryker/zed-navigation": "*"
             },
             "type": "library",
@@ -43113,7 +43149,7 @@
                 "proprietary"
             ],
             "description": "Tax module",
-            "time": "2020-07-08T08:09:21+00:00"
+            "time": "2020-10-06T09:05:32+00:00"
         },
         {
             "name": "spryker/tax-product-connector",
@@ -52599,16 +52635,16 @@
         },
         {
             "name": "psalm/phar",
-            "version": "3.16",
+            "version": "3.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/psalm/phar.git",
-                "reference": "dd24c332f219cd2a9b89ebaacd4f4734a232e7f8"
+                "reference": "8a8ddff69bf1767e41a6e4d18b8ec75103f7d154"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/psalm/phar/zipball/dd24c332f219cd2a9b89ebaacd4f4734a232e7f8",
-                "reference": "dd24c332f219cd2a9b89ebaacd4f4734a232e7f8",
+                "url": "https://api.github.com/repos/psalm/phar/zipball/8a8ddff69bf1767e41a6e4d18b8ec75103f7d154",
+                "reference": "8a8ddff69bf1767e41a6e4d18b8ec75103f7d154",
                 "shasum": ""
             },
             "require": {
@@ -52626,7 +52662,7 @@
                 "MIT"
             ],
             "description": "Composer-based Psalm Phar",
-            "time": "2020-09-15T14:25:05+00:00"
+            "time": "2020-10-13T00:57:36+00:00"
         },
         {
             "name": "psr/cache",
@@ -53645,6 +53681,10 @@
                 "update",
                 "versions"
             ],
+            "support": {
+                "issues": "https://github.com/soullivaneuh/composer-versions-check/issues",
+                "source": "https://github.com/soullivaneuh/composer-versions-check/tree/master"
+            },
             "time": "2020-05-05T13:03:07+00:00"
         },
         {
@@ -55413,9 +55453,17 @@
             "time": "2020-07-12T23:59:07+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "5.9.0",
+            "alias_normalized": "5.9.0.0",
+            "version": "9999999-dev",
+            "package": "spryker/tax"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "spryker/tax": 20,
         "spryker/code-sniffer": 20
     },
     "prefer-stable": true,

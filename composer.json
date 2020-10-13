@@ -828,7 +828,7 @@
     "spryker/synchronization": "^1.0.0",
     "spryker/synchronization-behavior": "^1.0.0",
     "spryker/synchronization-extension": "^1.0.0",
-    "spryker/tax": "^5.0.0",
+    "spryker/tax": "dev-master as 5.9.0",
     "spryker/tax-product-connector": "^4.0.0",
     "spryker/tax-product-storage": "^1.0.0",
     "spryker/tax-storage": "^1.0.0",
