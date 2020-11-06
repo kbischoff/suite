@@ -57,6 +57,9 @@ jobs:
                   php-version: ${{ matrix.php-version }}
                   extensions: mbstring, intl
 
+            - name: Generate transfer objects
+              run: vendor/bin/console transfer:generate
+
             - name: Install dependencies
               run: vendor/bin/console frontend:mp:install-dependencies
 
