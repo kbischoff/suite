@@ -21,7 +21,7 @@ jobs:
             mariadb:
                 image: mariadb:latest
                 ports:
-                    - 3306
+                    - 3306:3306
                 env:
                     MYSQL_USER: devtest
                     MYSQL_PASSWORD: mate20mg
@@ -88,10 +88,10 @@ jobs:
             - name: Generate transfer databuilder objects
               run: vendor/bin/console transfer:databuilder:generate
 
-#            - name: Propel install
-#              env:
-#                  SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
-#              run: vendor/bin/console propel:install
+            - name: Propel install
+              env:
+                  SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
+              run: vendor/bin/console propel:install
 
             - name: Codecept build
               run: vendor/bin/codecept build --ansi
