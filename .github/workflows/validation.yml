@@ -9,11 +9,11 @@ jobs:
     validation:
         runs-on: ubuntu-18.04
         strategy:
-            fail-fast: true
+            fail-fast: false
             matrix:
                 php-version: [
-                    '7.3',
-#                    '7.4',
+#                    '7.3',
+                    '7.4',
 #                    'nightly'
                 ]
 
@@ -40,17 +40,25 @@ jobs:
               with:
                   fetch-depth: 1
 
+            - name: Configure sysctl limits
+              run: |
+                sudo swapoff -a
+                sudo sysctl -w vm.swappiness=1
+                sudo sysctl -w fs.file-max=262144
+                sudo sysctl -w vm.max_map_count=262144
+
+            - uses: getong/elasticsearch-action@v1.2
+              with:
+                elasticsearch version: '7.6.1'
+                host port: 9200
+                container port: 9200
+                host node port: 9300
+                node port: 9300
+                discovery type: 'single-node'
+
             - uses: actions/setup-node@v1
               with:
                   node-version: '12'
-
-            - name: Verify MariaDB connection
-              env:
-                  SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
-              run: |
-                  while ! mysqladmin ping -h"127.0.0.1" -P"$SPRYKER_DB_PORT" --silent; do
-                      sleep 1
-                  done
 
             - name: Validate composer.json and composer.lock
               run: composer validate --strict
