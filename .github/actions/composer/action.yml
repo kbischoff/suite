@@ -1,0 +1,24 @@
+name: Composer
+description: 'Composite action for Composer steps'
+runs:
+    using: "composite"
+    steps:
+        - name: Validate composer.json and composer.lock
+          run: composer validate --strict
+
+        - name: Get Composer Cache Directory
+          id: composer-cache
+          run: |
+            echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+        - uses: actions/cache@v2
+          with:
+            path: ${{ steps.composer-cache.outputs.dir }}
+            key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+            restore-keys: |
+                ${{ runner.os }}-composer-
+
+        - name: Composer install
+          run: |
+            composer --version
+            composer install
