@@ -6,7 +6,8 @@ on: [
 ]
 
 jobs:
-    "Docker / Alpine / PHP 7.4 / PostgreSQL / Functional":
+    docker-alpine-php-74-postgresql-functional:
+        name: "Docker / Alpine / PHP 7.4 / PostgreSQL / Functional"
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
