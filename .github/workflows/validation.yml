@@ -34,6 +34,8 @@ jobs:
             APPLICATION_STORE: DE
             PROJECT: suite
             SPRYKER_TESTING_ENABLED: 1
+            SPRYKER_SEARCH_HOST: 127.0.0.1
+            SPRYKER_SEARCH_PORT: 9200
 
         steps:
             - uses: actions/checkout@v1
@@ -60,7 +62,25 @@ jobs:
               with:
                   node-version: '12'
 
-            - uses: ./.github/actions/composer
+            - name: Validate composer.json and composer.lock
+              run: composer validate --strict
+
+            - name: Get Composer Cache Directory
+              id: composer-cache
+              run: |
+                  echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+            - uses: actions/cache@v2
+              with:
+                  path: ${{ steps.composer-cache.outputs.dir }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-composer-
+
+            - name: Composer install
+              run: |
+                  composer --version
+                  composer install
 
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
@@ -74,8 +94,11 @@ jobs:
             - name: Generate transfer databuilder objects
               run: vendor/bin/console transfer:databuilder:generate
 
-#            - name: Propel install
-#              run: vendor/bin/console propel:install
+            - name: Propel install
+              run: |
+                  vendor/bin/console propel:schema:copy
+                  vendor/bin/console propel:model:build
+                  vendor/bin/console transfer:entity:generate
 
             - name: Setup search
               run: vendor/bin/console setup:search

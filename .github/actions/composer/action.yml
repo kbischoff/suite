@@ -4,9 +4,11 @@ runs:
     using: "composite"
     steps:
         - name: Validate composer.json and composer.lock
+          shell: bash
           run: composer validate --strict
 
         - name: Get Composer Cache Directory
+          shell: bash
           id: composer-cache
           run: |
             echo "::set-output name=dir::$(composer config cache-files-dir)"
@@ -19,6 +21,7 @@ runs:
                 ${{ runner.os }}-composer-
 
         - name: Composer install
+          shell: bash
           run: |
             composer --version
             composer install
