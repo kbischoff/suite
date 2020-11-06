@@ -34,7 +34,6 @@ jobs:
             APPLICATION_STORE: DE
             PROJECT: suite
             SPRYKER_TESTING_ENABLED: 1
-            SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
 
         steps:
             - uses: actions/checkout@v1
@@ -47,11 +46,12 @@ jobs:
 
             - name: Verify MariaDB connection
               env:
-                PORT: ${{ job.services.mariadb.ports[3306] }}
+                  PORT: ${{ job.services.mariadb.ports[3306] }}
               run: |
-                while ! mysqladmin ping -h"127.0.0.1" -P"$PORT" --silent; do
-                    sleep 1
-                done
+                  echo $PORT
+                  while ! mysqladmin ping -h"127.0.0.1" -P"$PORT" --silent; do
+                      sleep 1
+                  done
 
             - name: Validate composer.json and composer.lock
               run: composer validate --strict
@@ -90,6 +90,8 @@ jobs:
               run: vendor/bin/console transfer:databuilder:generate
 
             - name: Propel install
+              env:
+                  SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
               run: vendor/bin/console propel:install
 
             - name: Codecept build
