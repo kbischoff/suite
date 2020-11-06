@@ -17,12 +17,6 @@ jobs:
                     'nightly'
                 ]
 
-        env:
-            APPLICATION_ENV: devtest
-            APPLICATION_STORE: DE
-            PROJECT: suite
-            SPRYKER_TESTING_ENABLED: 1
-
         services:
             mariadb:
                 image: mariadb:latest
@@ -34,6 +28,13 @@ jobs:
                     MYSQL_DATABASE: DE_devtest_zed
                     MYSQL_ROOT_PASSWORD: mate20mg
                 options: --health-cmd="mysqladmin ping" --health-interval=5s --health-timeout=2s --health-retries=3
+
+        env:
+            APPLICATION_ENV: devtest
+            APPLICATION_STORE: DE
+            PROJECT: suite
+            SPRYKER_TESTING_ENABLED: 1
+            SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
 
         steps:
             - uses: actions/checkout@v1
