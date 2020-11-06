@@ -22,12 +22,6 @@ jobs:
             - name: Install apt-packages
               run: |
                   sudo apt-get install apache2-utils
-                  sudo apt-get install apt-transport-https
-                  sudo apt-get install ca-certificates
-                  sudo apt-get install curl
-                  sudo apt-get install gnupg-agent
-                  sudo apt-get install pigz
-                  sudo apt-get install software-properties-common
 
             - name: Run docker
               run: |
