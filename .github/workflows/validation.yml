@@ -17,18 +17,6 @@ jobs:
                     'nightly'
                 ]
 
-        services:
-            mariadb:
-                image: mariadb:latest
-                ports:
-                    - 3306:3306
-                env:
-                    MYSQL_USER: devtest
-                    MYSQL_PASSWORD: mate20mg
-                    MYSQL_DATABASE: DE_devtest_zed
-                    MYSQL_ROOT_PASSWORD: mate20mg
-                options: --health-cmd="mysqladmin ping" --health-interval=5s --health-timeout=2s --health-retries=3
-
         env:
             APPLICATION_ENV: devtest
             APPLICATION_STORE: DE
@@ -115,6 +103,15 @@ jobs:
                 vendor/bin/console frontend:project:install-dependencies
                 vendor/bin/console frontend:yves:install-dependencies
 
+            - name: Speccy lint Glue specification
+              run: speccy lint src/Generated/Glue/Specification/spryker_rest_api.schema.yml --rules=default
+
+            - name: Style lint
+              run: node ./frontend/libs/stylelint
+
+            - name: TS lint
+              run: node ./frontend/libs/tslint stylish
+
             - name: Validate propel files
               run: |
                   vendor/bin/console propel:schema:validate
@@ -131,7 +128,3 @@ jobs:
 
             - name: Run PHPStan
               run: vendor/bin/phpstan analyze -l 5 -c phpstan.neon src/
-
-#            Needs more than 4GB ram, only soultion seems to make use of self-hosted runner
-#            - name: Run Psalm
-#              run: vendor/bin/psalm.phar --show-info=false
