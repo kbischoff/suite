@@ -132,5 +132,6 @@ jobs:
             - name: Run PHPStan
               run: vendor/bin/phpstan analyze -l 5 -c phpstan.neon src/
 
-            - name: Run Psalm
-              run: vendor/bin/psalm.phar --show-info=false
+#            Needs more than 4GB ram, only soultion seems to make use of self-hosted runner
+#            - name: Run Psalm
+#              run: vendor/bin/psalm.phar --show-info=false
