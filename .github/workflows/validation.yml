@@ -92,8 +92,8 @@ jobs:
             - name: Generate transfer databuilder objects
               run: vendor/bin/console transfer:databuilder:generate
 
-            - name: Propel install
-              run: vendor/bin/console propel:install
+#            - name: Propel install
+#              run: vendor/bin/console propel:install
 
             - name: Setup search
               run: vendor/bin/console setup:search
