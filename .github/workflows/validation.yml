@@ -78,20 +78,20 @@ jobs:
                   php-version: ${{ matrix.php-version }}
                   extensions: mbstring, intl
 
-#            - name: Install NPM packages
-#              run: |
-#                  npm install speccy@0.11.0 -g
-#
-#            - name: Generate transfer objects
-#              run: vendor/bin/console transfer:generate
-#
-#            - name: Generate transfer databuilder objects
-#              run: vendor/bin/console transfer:databuilder:generate
+            - name: Install NPM packages
+              run: |
+                  npm install speccy@0.11.0 -g
 
-            - name: Propel install
-              env:
-                  SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
-              run: vendor/bin/console propel:install
+            - name: Generate transfer objects
+              run: vendor/bin/console transfer:generate
+
+            - name: Generate transfer databuilder objects
+              run: vendor/bin/console transfer:databuilder:generate
+
+#            - name: Propel install
+#              env:
+#                  SPRYKER_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
+#              run: vendor/bin/console propel:install
 
             - name: Codecept build
               run: vendor/bin/codecept build --ansi
@@ -102,8 +102,8 @@ jobs:
             - name: Generate rest API dcoumentation
               run: vendor/bin/console rest-api:generate:documentation
 
-            - name: Setup search
-              run: vendor/bin/console setup:search
+#            - name: Setup search
+#              run: vendor/bin/console setup:search
 
             - name: Frontend install-dependencies
               run: |
